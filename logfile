@@ -1,0 +1,62 @@
+*** Starting uWSGI 2.0.14 (64bit) on [Mon Dec 12 01:11:47 2016] ***
+compiled with version: 5.4.0 20160609 on 08 December 2016 04:41:30
+os: Linux-4.4.0-45-generic #66-Ubuntu SMP Wed Oct 19 14:12:37 UTC 2016
+nodename: ip-172-31-14-14
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/ubuntu/myproject
+detected binary path: /home/ubuntu/myproject/myprojectenv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 64138
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address myproject.sock fd 3
+Python version: 2.7.12 (default, Nov 19 2016, 06:48:10)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1cf2f60
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 436560 bytes (426 KB) for 5 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "./wsgi.py", line 1, in <module>
+    from myproject import app
+  File "./myproject.py", line 16, in <module>
+    import requests
+ImportError: No module named requests
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6950)
+spawned uWSGI worker 1 (pid: 6951, cores: 1)
+spawned uWSGI worker 2 (pid: 6952, cores: 1)
+spawned uWSGI worker 3 (pid: 6953, cores: 1)
+spawned uWSGI worker 4 (pid: 6954, cores: 1)
+spawned uWSGI worker 5 (pid: 6955, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 6954|app: -1|req: -1/1] 24.183.165.31 () {42 vars in 717 bytes} [Mon Dec 12 01:11:50 2016] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 6955|app: -1|req: -1/2] 1.34.82.30 () {30 vars in 399 bytes} [Mon Dec 12 07:52:23 2016] GET / => generated 21 bytes in 0 msecs (HTTP/1.0 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 6952|app: -1|req: -1/3] 220.133.22.86 () {30 vars in 402 bytes} [Mon Dec 12 08:13:22 2016] GET / => generated 21 bytes in 0 msecs (HTTP/1.0 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 6952|app: -1|req: -1/4] 89.248.169.50 () {36 vars in 445 bytes} [Mon Dec 12 11:13:11 2016] GET /muieblackcat => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 6954|app: -1|req: -1/5] 89.248.169.50 () {36 vars in 468 bytes} [Mon Dec 12 11:13:11 2016] GET //mysql/scripts/setup.php => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 6951|app: -1|req: -1/6] 64.251.14.74 () {26 vars in 287 bytes} [Mon Dec 12 13:47:42 2016] HEAD / => generated 21 bytes in 0 msecs (HTTP/1.0 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 6952|app: -1|req: -1/7] 91.149.232.34 () {32 vars in 427 bytes} [Mon Dec 12 15:15:51 2016] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 6952|app: -1|req: -1/8] 35.165.36.182 () {34 vars in 514 bytes} [Mon Dec 12 16:20:09 2016] GET /manager/html => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 6952|app: -1|req: -1/9] 91.149.207.178 () {32 vars in 428 bytes} [Mon Dec 12 19:23:54 2016] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 6952|app: -1|req: -1/10] 185.110.132.231 () {32 vars in 365 bytes} [Mon Dec 12 19:51:39 2016] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 6952|app: -1|req: -1/11] 51.15.53.124 () {32 vars in 459 bytes} [Mon Dec 12 23:17:15 2016] GET /xmlrpc.php => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 6952|app: -1|req: -1/12] 122.117.184.142 () {30 vars in 404 bytes} [Tue Dec 13 02:12:44 2016] GET / => generated 21 bytes in 0 msecs (HTTP/1.0 500) 2 headers in 83 bytes (1 switches on core 0)
