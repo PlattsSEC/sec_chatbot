@@ -28,7 +28,7 @@ vp = tf.contrib.learn.preprocessing.VocabularyProcessor.restore(
 
 # Load your own data here
 INPUT_CONTEXT = "How are you bud?"
-POTENTIAL_RESPONSES = ["I'm doing great", "The sum of all the sides of a square is known as the permiter"]
+POTENTIAL_RESPONSES = ["I'm doing great","Batman is Bruce Wayne", "The sum of all the sides of a square is known as the permiter"]
 
 def get_features(context, utterance):
   context_matrix = np.array(list(vp.transform([context])))
