@@ -18,6 +18,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
+msg_array={"projects":"We worked on an online whiteboard last semester","hey":"Hello!","thnx":"No problem","when":"We meet at wednesdays at 5 PM at Au Sable","count":"We have around 20 members","prez":"Prithaj","vprez":"Alex"}
 
 @app.route('/', methods=['GET'])
 def verify():
@@ -50,7 +51,27 @@ def webhook():
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                     message_text = messaging_event["message"]["text"]  # the message's text
 
-                    send_message(sender_id, "got it, thanks!")
+                    if ("when" in message_text) or ("When" in message_text):
+                        send_message(sender_id, msg_array["when"])
+                    
+                    elif "vice" in message_text:
+                        send_message(sender_id, msg_array["vprez"])
+                    
+                    elif "president"in message_text:
+                        send_message(sender_id, msg_array["prez"])
+                    
+                    elif "many" in message_text:
+                        send_message(sender_id, msg_array["count"])
+                    elif "hey" in message_text:
+                        send_message(sender_id,msg_array["hey"])
+
+                    elif ("thanks" in message_text) or ("Thanks" in message_text) or ("Thank you" in message_text):
+                        send_message(sender_id,msg_array["thnx"])
+                    elif "project" in message_text:
+                        send_message(sender_id,msg_array["projects"])
+
+                    else:
+                        send_message(sender_id,"I didn't get that. Could you repeat that please?")
 
                 if messaging_event.get("delivery"):  # delivery confirmation
                     pass
